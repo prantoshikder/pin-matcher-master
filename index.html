@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="generatePinCode" class="form-control" value="0000" placeholder="0000" type="text">
+                    <button id="generate" class="generate-btn" onclick="generatePinCode()">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="inputPinCode" class="form-control" value="" placeholder="0000" type="text">
+                    <div class="numbers">
+                        <div class="calc-body">
+                            <div class="calc-button-row">
+                                <div onclick='clickButton("7")' id="number" class="button">7</div>
+                                <div onclick='clickButton("8")' id="number" class="button">8</div>
+                                <div onclick='clickButton("9")' id="number" class="button">9</div>
+                            </div>
+
+                            <div class="calc-button-row">
+                                <div onclick='clickButton("4")' id="number" class="button">4</div>
+                                <div onclick='clickButton("5")' id="number" class="button">5</div>
+                                <div onclick='clickButton("6")' id="number" class="button">6</div>
+                            </div>
+
+                            <div class="calc-button-row">
+                                <div onclick='clickButton("1")' id="number" class="button">1</div>
+                                <div onclick='clickButton("2")' id="number" class="button">2</div>
+                                <div onclick='clickButton("3")' id="number" class="button">3</div>
+                            </div>
+
+                            <div class="calc-button-row">
+                                <div onclick='clickBackSpaceButton()' id="backSpace" class="button">
+                                    <</div>
+                                        <div onclick='clickButton("0")' id="number" class="button">0</div>
+                                        <div onclick='clickClearButton("")' id="clear" class="button">C</div>
+                                </div>
+                                <div>
+                                    <button onclick='submitButton()' type="submit" id="submitButton" class="submit-btn">Submit</button>
+                                    <p id="trialAction" class="action-left">4 try left</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="notify-section">
+                    <p id="matchingNotPinCode" class="notify">❌ Pin Didn't Match, Please try again</p>
+                    <p id="matchingPinCode" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="js/custom.js"></script>
+</body>
+
+</html>
